@@ -16,6 +16,7 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
+  background-color: #f1f2f2;
 }
 
 /* ROOT FONT STYLES */
@@ -53,9 +54,9 @@ h6 {
 }
 
 p {
-  font-size: 1.125rem;
-  font-weight: 200;
-  line-height: 1.8;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .font-light {
@@ -106,7 +107,7 @@ p {
 
 .row [class^="col"] {
   float: left;
-  margin: 0.5rem 1.0416%;
+  margin: 0.625rem 1.0416%;
   min-height: 0.125rem;
 }
 
@@ -122,55 +123,55 @@ p {
 .col-10,
 .col-11,
 .col-12 {
-  width: 97.9166%;
+  width: 97.9104%;
 }
 
 .col-1-sm {
-  width: 6.25%;
+  width: 6.2496%;
 }
 
 .col-2-sm {
-  width: 12.66%;
+  width: 14.5824%;
 }
 
 .col-3-sm {
-  width: 21%;
+  width: 22.9152%;
 }
 
 .col-4-sm {
-  width: 29.33%;
+  width: 31.248%;
 }
 
 .col-5-sm {
-  width: 37.66%;
+  width: 39.5808%;
 }
 
 .col-6-sm {
-  width: 46%;
+  width: 47.9136%;
 }
 
 .col-7-sm {
-  width: 54.33%;
+  width: 56.2464%;
 }
 
 .col-8-sm {
-  width: 62.66%;
+  width: 64.5792%;
 }
 
 .col-9-sm {
-  width: 71%;
+  width: 72.912%;
 }
 
 .col-10-sm {
-  width: 79.33%;
+  width: 81.2448%;
 }
 
 .col-11-sm {
-  width: 87.66%;
+  width: 89.5776%;
 }
 
 .col-12-sm {
-  width: 96%;
+  width: 97.9104%;
 }
 
 .row::after {
@@ -191,51 +192,51 @@ p {
 
 @media only screen and (min-width: 45em) {  /* 720px */
   .col-1 {
-    width: 4.33%;
+    width: 6.2496%;
   }
 
   .col-2 {
-    width: 12.66%;
+    width: 14.5824%;
   }
 
   .col-3 {
-    width: 21%;
+    width: 22.9152%;
   }
 
   .col-4 {
-    width: 29.33%;
+    width: 31.248%;
   }
 
   .col-5 {
-    width: 37.66%;
+    width: 39.5808%;
   }
 
   .col-6 {
-    width: 46%;
+    width: 47.9136%;
   }
 
   .col-7 {
-    width: 54.33%;
+    width: 56.2464%;
   }
 
   .col-8 {
-    width: 62.66%;
+    width: 64.5792%;
   }
 
   .col-9 {
-    width: 71%;
+    width: 72.912%;
   }
 
   .col-10 {
-    width: 79.33%;
+    width: 81.2448%;
   }
 
   .col-11 {
-    width: 87.66%;
+    width: 89.5776%;
   }
 
   .col-12 {
-    width: 96%;
+    width: 97.9104%;
   }
 
   .hidden-sm {
@@ -268,22 +269,91 @@ p {
 }
 
 .footer {
-
+	background-color: #424242;
+	height: 200px;
 }
 
 .left-side {
+	list-style: none;
+    padding: 0;
+	margin: 0;
+}
 
+.left-side li {
+	margin-bottom: 1.25rem;
+	padding-bottom: 0.625rem;
+	background-color: #fff;
+	box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .feature-image {
-
+	height: 11.25rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 .restaurant-details {
+	margin: 0.625rem;
+}
 
+#details {
+	display: inline;
+}
+
+.rating {
+	display: inline-block;
+    background: url('../images/rating.png') no-repeat;
+    height: 17px;
+    width: 91px;
+	margin: 0 5px;
+}
+
+#s1 {
+	background-position: 0 0;
+}
+
+#s2 {
+	background-position: 0 -17px;
+}
+
+#s3 {
+	background-position: 0 -34px;
+}
+
+#s4 {
+	background-position: 0 -51px;
+}
+
+#s5 {
+	background-position: 0 -68px;
+}
+
+.distance {
+	display: inline;
+    float: right;
+}
+
+.arrow {
+	background: url('../images/distance.png') no-repeat;
+	display: inline-block;
+    height: 22px;
+    width: 20px;
+	margin-right: 5px;
 }
 
 .right-side {
+	border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+	box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -293,4 +363,25 @@ p {
 
 .friend-list {
 
+}
+
+.avatar {
+	height: 48px;
+    width: 48px;
+    border-radius: 50%;
+	display: inline-block;
+}
+
+.status {
+	width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    top: 32px;
+    left: 32px;
+    position: relative;
+}
+
+#online {
+	background-color: green;
 }
