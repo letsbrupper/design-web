@@ -253,6 +253,15 @@ p {
 
 /* ==== LETSBRUPPER ==== */
 
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
 .header {
 	height: 60px;
 	background-color: #4db6ac;
@@ -270,13 +279,36 @@ p {
 
 .footer {
 	background-color: #424242;
-	height: 200px;
+	padding: 3.5rem 0;
+	margin-top: 9.375rem;
+}
+
+.app-wrap {
+	float: right;
+}
+
+.app-border {
+	border-radius: 10px;
+    border: 1px solid #fff;
+	display: inline-block;
+}
+
+.app-appstore-bg {
+	background: url('../images/app.png') 0 0 no-repeat;
+	height: 48px;
+    width: 166px;
+    margin: 0.625rem;
+}
+
+.app-googleplay-bg {
+	background: url('../images/app.png') -166px 0 no-repeat;
+	height: 48px;
+    width: 166px;
+    margin: 0.625rem;
 }
 
 .left-side {
-	list-style: none;
-    padding: 0;
-	margin: 0;
+	
 }
 
 .left-side li {
@@ -298,6 +330,22 @@ p {
 
 .restaurant-details {
 	margin: 0.625rem;
+}
+
+.restaurant-info {
+	
+}
+
+.button-field {
+	margin: 1rem;
+	
+}
+
+.standard-button {
+	background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
 }
 
 #details {
@@ -362,7 +410,11 @@ p {
 }
 
 .friend-list {
+	padding: 0 1.5rem;
+}
 
+.friend-list li {
+	padding: 0.4rem 0;
 }
 
 .avatar {
@@ -384,4 +436,31 @@ p {
 
 #online {
 	background-color: green;
+}
+
+#offline {
+	background-color: gray;
+}
+
+#busy {
+	background-color: yellow;
+}
+
+.like-dislike {
+	display: inline-block;
+    background: url('../images/like.png') no-repeat;
+    height: 48px;
+    width: 33px;
+}
+
+#like {
+	background-position: 0 0;
+}
+
+#dislike {
+	background-position: -33px 0;
+}
+
+#nope {
+	background: none;
 }
