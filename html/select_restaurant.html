@@ -26,7 +26,12 @@
 				<h2 class="font-light"> Select restaurant </h2>
 			</div>
 			<div class="col-6">
-				<h4 class="font-light right" > Sorted by distance </h4>
+				<select class="sorting">
+					<option value="sorted-by-distance">Sorted by distance</option>
+					<option value="sorted-by-rating">Sorted by rating</option>
+					<option value="sorted-by-alphabet">Sorted by alphabet</option>
+				</select>
+				
 			</div>
 		</div>
 		<div class="row">
@@ -120,7 +125,7 @@
 								3.1km
 							</div>
 						</li>
-						<li>
+						<li id="selected-friend">
 							<div class="avatar" style="background: url('images/data/quangtung.png') no-repeat;">
 								<div class="status" id="busy">
 								</div>
@@ -130,6 +135,17 @@
 							</div>
 							<div class="distance">
 								2.2km
+							</div>
+							<div class="profile">
+								<p style="padding-left: 1.5rem;">
+								0123 456 789<br>
+								07 Le Dinh Chinh, Thanh Son, PR-TC
+								
+								</p>
+								<div>
+									<button class="standard-button" id="chat">Chat</button>
+									<button class="standard-button" id="call">Call</button>
+								</div>
 							</div>
 						</li>
 						<li>
@@ -188,6 +204,43 @@
 					</a>
 				</div>
 			</div>
+		</div>
+	</div>
+	
+	<div class="chatbox-wrapper">
+		<div class="chatbox-name">
+			Quang Tung
+			<button class="button-close">
+		</div>
+		<div class="chatbox-content">
+			<ul class="me">
+				<li><img class="avatar-chat" src="images/data/trihuynh.png">By this User, First message<span class="tooltiptext">28 Aug<br>9:52pm</span></li>
+			</ul>
+			<ul class="you">
+				<li>By Other User<span class="tooltiptext">28 Aug<br>9:52pm</span></li>
+				<li>By Other User<span class="tooltiptext">28 Aug<br>11:52pm</span></li>
+				<li><img class="avatar-chat" src="images/data/quangtung.png">By Other User<span class="tooltiptext">28 Aug<br>11:59pm</span></li>
+			</ul>
+			<ul class="me">
+				<li>By this User, First message<span class="tooltiptext">28 Aug<br>9:52pm</span></li>
+				<li>By this User, Second message<span class="tooltiptext">28 Aug<br>9:55pm</span></li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="tooltiptext">28 Aug<br>9:57pm</span></li>
+				<li>By this User, Fourth message<span class="tooltiptext">28 Aug<br>12:33pm</span></li>
+				<li><img class="avatar-chat" src="images/data/trihuynh.png">By this User, Fifth message<span class="tooltiptext">28 Aug<br>9:45pm</span></li>
+			</ul>
+			<ul class="you">
+				<li><img class="avatar-chat" src="images/data/quangtung.png">By Other User<span class="tooltiptext">28 Aug<br>9:52pm</span></li>
+			</ul>
+			<ul class="me">
+				<li>By this User, Second message<span class="tooltiptext">28 Aug<br>9:52pm</span></li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="tooltiptext">28 Aug<br>9:52pm</span></li>
+				<li><img class="avatar-chat" src="images/data/trihuynh.png">By this User, Fourth message. Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="tooltiptext">28 Aug<br>9:52pm</span></li>
+			</ul>
+		</div>
+		<div class="chat-input-wrapper">
+			<a href="#"><div class="emoji"></div></a>
+			<input class="chat-input" type="text" placeholder="Type here...">
+			<button class="chat-send" type="submit">
 		</div>
 	</div>
 

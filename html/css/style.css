@@ -251,7 +251,7 @@ p {
   }
 }
 
-/* ==== LETSBRUPPER ==== */
+/* ==== LETSBRUPPER - CONTENT ==== */
 
 ul {
 	padding: 0;
@@ -268,6 +268,19 @@ li {
 	position: fixed;
     width: 100%;
     z-index: 9999;
+}
+
+.sorting {
+	width: 50%;
+    min-width: max-content;
+    margin: 1.7rem 0;
+    float: right;
+    font-size: 1.125rem;
+    font-weight: 300;
+    background: none;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #000;
 }
 
 .logo {
@@ -341,11 +354,29 @@ li {
 	
 }
 
+#selected-friend {
+	padding: 0.8rem 0;
+    margin: 0.8rem 0;
+    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+}
+
 .standard-button {
-	background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-    background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-    background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-    background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+	height: 40px;
+    min-width: 120px;
+    font: 1rem/100% lato;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background: none;
+}
+
+.standard-button:hover {
+	background-color: #4db6ac;
+	border-color: #4db6ac;
+	color: #fff;
 }
 
 #details {
@@ -411,6 +442,7 @@ li {
 
 .friend-list {
 	padding: 0 1.5rem;
+	margin-bottom: 2rem;
 }
 
 .friend-list li {
@@ -464,3 +496,229 @@ li {
 #nope {
 	background: none;
 }
+
+/* ==== LETSBRUPPER - CHATBOX ==== */
+
+.chatbox-wrapper {
+	position: fixed;
+	overflow: hidden;
+    height: 450px;
+    width: 320px;
+    right: 0;
+    bottom: 0;
+	border: 1px solid #26A69A;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #fff;
+	box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.chatbox-name {
+	height: 30px;
+    background: #26A69A;
+    color: #fff;
+    text-align: center;
+    line-height: 1.6rem;
+}
+
+.button-close {
+    color: #fff;
+    font: 16px/100% arial, sans-serif;
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    top: 5px;
+    border: none;
+    background: none;
+}
+
+.button-close:after {
+	content: '✖'; /* UTF-8 symbol */
+}
+
+.chatbox-content {
+	overflow-y: scroll;
+	height: 360px;
+	border-bottom: 1px solid #26A69A;
+}
+
+.chatbox-content ul:first-child {
+	margin-top: 12px;
+}
+
+.chatbox-content ul:last-child {
+	margin-bottom: 12px;
+}
+ul.me, ul.you {
+	margin: 2px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.me li, .you li {
+	display: inline-block;
+	position: relative;
+    clear: both;
+    padding: 10px 16px 12.4px;
+    border-radius: 20px;
+    margin-bottom: 1px;
+    line-height: normal;
+    font-size: 0.9rem;
+    max-width: 200px;
+}
+
+.you li {
+	float: left;
+	margin-left:8px;
+	border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+	border: 1px solid #424242;
+	padding: 9px 15px 11.4px;
+}
+
+.you li:first-child {
+	border-top-left-radius: 20px;
+}
+
+.you li:last-child {
+	border-bottom-left-radius: 20px;
+	padding-left: 48px;
+	max-width: 168px;
+}
+
+.me li {
+	float: right;
+	background: #4db6ac;
+	color: #fff;
+	margin-right:8px;
+	text-align: left;
+	border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.me li:first-child {
+	border-top-right-radius: 20px;
+}
+
+.me li:last-child {
+	border-bottom-right-radius: 20px;
+	padding-right: 48px;
+	max-width: 168px;
+}
+
+.tooltiptext {
+	visibility: hidden;
+	width: 80px;
+    color: #bbb;    
+    position: absolute;
+    top: calc(50% - 16px);    
+    font-size: 0.75rem;
+    line-height: normal;
+    font-weight: 800;
+}
+
+.me li .tooltiptext {
+	text-align: right;
+	left: -90px;
+}
+
+.you li .tooltiptext {
+	text-align: left;
+	right: -90px;
+}
+
+li:hover .tooltiptext {
+	visibility: visible;
+}
+
+.avatar-chat {
+	position: absolute;
+	height: 36px;
+	border-radius: 50%;
+}
+
+.you li .avatar-chat {
+	bottom: 1px;
+    left: 1px;    
+}
+
+.me li .avatar-chat {
+	right: 2px;
+    bottom: 2px;
+}
+
+.chatbox-content::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+.chatbox-content::-webkit-scrollbar-track {
+	background-color: #fff;
+	border-left: 1px solid #26A69A;
+}
+ 
+.chatbox-content::-webkit-scrollbar-thumb {
+	background-color: #26A69A;
+    
+}
+
+/* ==== LETSBRUPPER - FORMS ==== */
+
+input {
+	outline: none;
+    border: none;
+}
+
+input[type=text] {
+	display: inline-block;
+    box-sizing: border-box;
+    border-bottom: 1px solid #424242;
+}
+
+.chat-input-wrapper {
+	position: relative;
+	margin: 10px;
+    height: 40px;
+	width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: -o-fill-available;
+	width: -ms-fill-available;
+	width: fill-available;
+    display: inline-block;
+}
+
+.chat-input {
+	position: absolute;
+    top: 0;
+    left: 40px;
+	padding: 10px 0 0;
+    margin: 0 10px;
+    width: 200px;
+}
+
+.chat-send {
+	height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/chat.png) 0 0 no-repeat;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.emoji {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 40px;
+    width: 40px;
+    display: inline-block;
+    background: url(../images/chat.png) -40px 0 no-repeat;
+}
+	
